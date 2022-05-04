@@ -63,6 +63,15 @@ public class ClientServiceImpl implements ClientService {
         if (clientToUpdate == null) {
             throw new EmptyResultException(String.format(NO_CLIENT_FOUND_BY_UID, client.getUid()));
         }
+        if (client.getFirstName() != null) {
+            clientToUpdate.setFirstName(client.getFirstName());
+        }
+        if (client.getLastName() != null) {
+            clientToUpdate.setLastName(client.getLastName());
+        }
+        if (client.getDateOfBirth() != null) {
+            clientToUpdate.setDateOfBirth(client.getDateOfBirth());
+        }
         return clientDtoMapper.entityToDto(clientToUpdate);
     }
 

@@ -52,5 +52,4 @@ public class UserController extends ErrorControllerHandler {
         return new ResponseEntity<>(client, OK);
     }
 
-
 }

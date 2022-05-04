@@ -46,7 +46,8 @@ public class ClientDtoMapper implements EntityToDtoMapper <Client, ClientDto> {
     public Client dtoToEntity(ClientDto dto) {
         Client client = clientRepository.findByUid(dto.getUid());
         if (client == null) {
-            client = new Client(dto.getFirstName(), dto.getLastName(), dto.getDateOdBirth(), roleRepository.findRoleByRoleName(ROLE_USER), randomUidGenerator.generateRandomTransferUid());
+            client = new Client(dto.getFirstName(), dto.getLastName(), dto.getDateOfBirth(), roleRepository.findRoleByRoleName(ROLE_USER), randomUidGenerator.generateRandomTransferUid());
+            System.out.println("ClientDtoMapper: " + client);
         }
         return client;
     }

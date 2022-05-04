@@ -1,5 +1,6 @@
 package by.andersen.laboratory.microservice.users.model.dto;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -17,7 +18,8 @@ public class ClientDto {
 
     private Long uid;
 
-    private Date dateOdBirth;
+    @JsonFormat(pattern="yyyy-MM-dd")
+    private Date dateOfBirth;
 
     private String role;
 
