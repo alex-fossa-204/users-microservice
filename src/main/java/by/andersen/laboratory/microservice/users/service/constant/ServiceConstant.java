@@ -1,6 +1,6 @@
 package by.andersen.laboratory.microservice.users.service.constant;
 
-public class ServiceMessagesConstant {
+public class ServiceConstant {
 
     public static final String EMPTY_RESULT_SET_MSG = "Empty result set";
 
