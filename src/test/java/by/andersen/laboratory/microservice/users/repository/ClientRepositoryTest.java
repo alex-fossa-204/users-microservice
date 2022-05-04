@@ -9,16 +9,23 @@ import org.springframework.boot.test.context.SpringBootTest;
 import java.util.List;
 
 @SpringBootTest
-public class UserRepositoryTest {
+public class ClientRepositoryTest {
 
     @Autowired
-    private UserRepository userRepository;
+    private ClientRepository clientRepository;
 
     @Test
     public void findAllUsersTest() {
-        List<Client> users = userRepository.findAll();
+        List<Client> users = clientRepository.findAll();
         Assertions.assertNotNull(users);
         users.forEach(System.out::println);
+    }
+
+    @Test
+    public void findByUidTest() {
+        Client client = clientRepository.findByUid(786486841L);
+        System.out.println(client);
+        Assertions.assertNotNull(client);
     }
 
 }
