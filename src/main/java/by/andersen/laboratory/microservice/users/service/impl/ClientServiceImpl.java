@@ -72,6 +72,7 @@ public class ClientServiceImpl implements ClientService {
         if (client.getDateOfBirth() != null) {
             clientToUpdate.setDateOfBirth(client.getDateOfBirth());
         }
+        clientRepository.save(clientToUpdate);
         return clientDtoMapper.entityToDto(clientToUpdate);
     }
 
