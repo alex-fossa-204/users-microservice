@@ -1,0 +1,13 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/changeset-create_table/users-tables-insert.sql
+  - include:
+      file: db/changelog/changeset-create_constraints/users-tables-constraints.sql
+  - include:
+      file: db/changelog/changeset-populate_tables/users-tables-populate-roles.sql
+  - include:
+      file: db/changelog/changeset-populate_tables/users-tables-populate-privileges.sql
+  - include:
+      file: db/changelog/changeset-populate_tables/users-tables-populate-roles-privileges.sql
+  - include:
+      file: db/changelog/changeset-populate_tables/users-tables-populate-clients.sql
