@@ -2,5 +2,7 @@
 
 --changeset Bakulin:roles_insert splitStatements:true endDelimiter:;
 
-INSERT INTO role OVERRIDING SYSTEM VALUE VALUES (1, 'USER');
-INSERT INTO role OVERRIDING SYSTEM VALUE VALUES (2, 'ADMIN');
+INSERT INTO role (role_name)
+VALUES
+('USER'),
+('ADMIN');
