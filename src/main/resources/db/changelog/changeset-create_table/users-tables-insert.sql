@@ -4,7 +4,7 @@
 
 CREATE TABLE client
 (
-    id int PRIMARY KEY,
+    id int generated always as identity PRIMARY KEY,
     firstname VARCHAR(64),
     lastname VARCHAR(64),
     date_of_birth timestamp,
@@ -14,7 +14,7 @@ CREATE TABLE client
 
 CREATE TABLE credential
 (
-    id int PRIMARY KEY,
+    id int generated always as identity PRIMARY KEY,
     login VARCHAR(64),
     password VARCHAR(64),
     join_date timestamp,
@@ -26,13 +26,13 @@ CREATE TABLE credential
 
 CREATE TABLE privilege
 (
-    id int PRIMARY KEY,
+    id int generated always as identity PRIMARY KEY,
     privilege VARCHAR(64)
 );
 
 CREATE TABLE role
 (
-    id int PRIMARY KEY,
+    id int generated always as identity PRIMARY KEY,
     role_name VARCHAR(64)
 );
 
